@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="App" >
       <h1>Natural Pic</h1>
-      <Gallery  isHome={true} />
+      <Gallery isHome={true} />
     </div>
   );
 };

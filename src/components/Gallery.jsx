@@ -21,8 +21,7 @@ const Gallery = ({isHome}) => {
             
             if (foto.linked)
                 usedRow=true
-                usedCora=false
-           
+                usedCora=false         
         }
         else{
             usedRow=true
@@ -35,7 +34,6 @@ const Gallery = ({isHome}) => {
                     </div>
             )
         }
-        
     })}   
  </div>
 };

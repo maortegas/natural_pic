@@ -23,13 +23,10 @@ export const ProviderContext = ({ children }) => {
      
     }, [])
 
-
     return (
         <NaturalContext.Provider value={{fotos,setFotos }}>
             {children}
         </NaturalContext.Provider>
-
-
         );
 };
 
