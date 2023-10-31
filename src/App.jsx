@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import {ProviderContext} from "./context/NatutalContext";
+import {ProviderContext} from "./context/NaturalContext";
 
 import Favorites from "./views/Favorites";
 import Home from "./views/Home";

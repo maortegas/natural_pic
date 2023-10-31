@@ -1,10 +1,10 @@
 import IconHeart from "./IconHeart";
-import { NatutalContext} from "../context/NatutalContext";
+import { NaturalContext} from "../context/NaturalContext";
 import { useContext } from "react";
 
-const Gallery = ({home}) => {
+const Gallery = ({isHome}) => {
 
-  const { fotos, setFotos } = useContext(NatutalContext);
+  const { fotos, setFotos } = useContext(NaturalContext);
   let usedRow=true
   let usedCora=true
 
@@ -17,10 +17,12 @@ const Gallery = ({home}) => {
   return <div className="gallery grid-columns-5 p-3">
     {fotos.map((foto) => {
         usedRow=false
-        if (!home){
+        if (!isHome){
+            
             if (foto.linked)
                 usedRow=true
                 usedCora=false
+           
         }
         else{
             usedRow=true
@@ -33,7 +35,8 @@ const Gallery = ({home}) => {
                     </div>
             )
         }
-    })}
+        
+    })}   
  </div>
 };
 export default Gallery;
