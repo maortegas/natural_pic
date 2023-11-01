@@ -10,16 +10,15 @@ const Gallery = ({isHome}) => {
 
   const onHandle=(id)=>{
     let index = fotos.findIndex(x => x.id === id)
-    fotos[index].linked=!fotos[index].linked
+    fotos[index].liked=!fotos[index].liked
     setFotos([...fotos])
     }
 
   return <div className="gallery grid-columns-5 p-3">
     {fotos.map((foto) => {
         usedRow=false
-        if (!isHome){
-            
-            if (foto.linked)
+        if (!isHome){  
+            if (foto.liked)
                 usedRow=true
                 usedCora=false         
         }
@@ -30,7 +29,7 @@ const Gallery = ({isHome}) => {
         if (usedRow){
             return(  <div  className="container"  key={foto.id} >  
                         <img className="photo "  src={foto.src.portrait } alt="" onClick={() => onHandle(foto.id)} />
-                        {usedCora && <IconHeart className='mysvg'  filled={foto.linked}/>}
+                        {usedCora && <IconHeart className='mysvg'  filled={foto.liked}/>}
                     </div>
             )
         }
