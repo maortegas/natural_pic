@@ -9,7 +9,7 @@ const Gallery = ({isHome}) => {
   let usedCora=true
 
   const onHandle=(id)=>{
-    let index = fotos.findIndex(x => x.id === id)
+    let index = fotos.findIndex(elemento => elemento.id === id)
     fotos[index].liked=!fotos[index].liked
     setFotos([...fotos])
     }
